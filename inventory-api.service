@@ -1,0 +1,13 @@
+[Unit]
+Description=Danifon Inventory API (Flask)
+After=network.target
+
+[Service]
+User=rootrager
+WorkingDirectory=/home/rootrager/programming/price_project/main
+Environment="PATH=/home/rootrager/programming/myenv/bin:/usr/bin"
+ExecStart=/home/rootrager/programming/myenv/bin/python /home/rootrager/programming/price_project/main/inventory_api.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
